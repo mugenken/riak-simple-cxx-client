@@ -1,0 +1,4 @@
+Simple, unportable and unstable riak c++ pbc driver.
+
+The message templating and types are from the official basho cxx client mostly.
+
