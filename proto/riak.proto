@@ -5,6 +5,10 @@ message RpbErrorResp {
     required uint32 errcode = 2;
 }
 
+message RpbPingReq {}
+message RpbPingResp {}
+
+message RpbGetClientIdReq {}
 message RpbGetClientIdResp {
     required bytes client_id = 1; // Client id in use for this connection
 }
@@ -12,9 +16,9 @@ message RpbGetClientIdResp {
 message RpbSetClientIdReq {
     required bytes client_id = 1; // Client id to use for this connection
 }
+message RpbSetClientIdResp {}
 
 message RpbGetServerInfoReq {}
-
 message RpbGetServerInfoResp {
     optional bytes node = 1;
     optional bytes server_version = 2;
@@ -25,7 +29,6 @@ message RpbGetReq {
     required bytes key = 2;
     optional uint32 r = 3;
 }
-
 message RpbGetResp {
     repeated RpbContent content = 1;
     optional bytes vclock = 2;        // the opaque vector clock for the object
@@ -40,7 +43,6 @@ message RpbPutReq {
     optional uint32 dw = 6;
     optional bool return_body = 7;
 }
-
 message RpbPutResp {
     repeated RpbContent content = 1;
     optional bytes vclock = 2;        // the opaque vector clock for the object
@@ -51,7 +53,9 @@ message RpbDelReq {
     required bytes key = 2;
     optional uint32 rw = 3;
 }
+message RpbDelResp {}
 
+message RpbListBucketReq {}
 message RpbListBucketsResp {
     repeated bytes buckets = 1;
 }
@@ -60,7 +64,6 @@ message RpbListBucketsResp {
 message RpbListKeysReq {
     required bytes bucket = 1;
 }
-
 message RpbListKeysResp {
     repeated bytes keys = 1;
     optional bool done = 2;
@@ -69,7 +72,6 @@ message RpbListKeysResp {
 message RpbGetBucketReq {
     required bytes bucket = 1;
 }
-
 message RpbGetBucketResp {
     required RpbBucketProps props = 1;
 }
@@ -78,12 +80,12 @@ message RpbSetBucketReq {
     required bytes bucket = 1;
     required RpbBucketProps props = 2;
 }
+message RpbSetBucketResp {}
 
 message RpbMapRedReq {
     required bytes request = 1;
     required bytes content_type = 2;
 }
-
 message RpbMapRedResp {
     optional uint32 phase = 1;
     optional bytes response = 2;

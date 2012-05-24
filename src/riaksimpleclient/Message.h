@@ -54,14 +54,14 @@ namespace Message {
 
     typedef message<RPB_ERROR_RESP, RpbErrorResp> error_resp;
 
-    typedef message<RPB_PING_REQ> ping_req;
-    typedef message<RPB_PING_RESP> ping_resp;
+    typedef message<RPB_PING_REQ, RpbPingReq> ping_req;
+    typedef message<RPB_PING_RESP, RpbPingResp> ping_resp;
 
-    typedef message<RPB_GET_CLIENT_ID_REQ> get_client_id_req;
+    typedef message<RPB_GET_CLIENT_ID_REQ, RpbGetClientIdReq> get_client_id_req;
     typedef message<RPB_GET_CLIENT_ID_RESP, RpbGetClientIdResp> get_client_id_resp;
 
     typedef message<RPB_SET_CLIENT_ID_REQ, RpbSetClientIdReq> set_client_id_req;
-    typedef message<RPB_SET_CLIENT_ID_RESP> set_client_id_resp;
+    typedef message<RPB_SET_CLIENT_ID_RESP, RpbSetClientIdResp> set_client_id_resp;
 
     typedef message<RPB_GET_SERVER_INFO_REQ, RpbGetServerInfoReq> get_server_info_req;
     typedef message<RPB_GET_SERVER_INFO_RESP, RpbGetServerInfoResp> get_server_info_resp;
@@ -73,9 +73,9 @@ namespace Message {
     typedef message<RPB_PUT_RESP, RpbPutResp> put_resp;
 
     typedef message<RPB_DEL_REQ, RpbDelReq> del_req;
-    typedef message<RPB_DEL_RESP> del_resp;
+    typedef message<RPB_DEL_RESP, RpbDelResp> del_resp;
 
-    typedef message<RPB_LIST_BUCKETS_REQ> list_buckets_req;
+    typedef message<RPB_LIST_BUCKETS_REQ, RpbListBucketReq> list_buckets_req;
     typedef message<RPB_LIST_BUCKETS_RESP, RpbListBucketsResp> list_buckets_resp;
 
     typedef message<RPB_LIST_KEYS_REQ, RpbListKeysReq> list_keys_req;
@@ -85,7 +85,7 @@ namespace Message {
     typedef message<RPB_GET_BUCKET_RESP, RpbGetBucketResp> get_bucket_resp;
 
     typedef message<RPB_SET_BUCKET_REQ, RpbSetBucketReq> set_bucket_req;
-    typedef message<RPB_SET_BUCKET_RESP> set_bucket_resp;
+    typedef message<RPB_SET_BUCKET_RESP RpbSetBucketResp> set_bucket_resp;
 
     typedef message<RPB_MAP_RED_REQ, RpbMapRedReq> map_red_req;
     typedef message<RPB_MAP_RED_RESP, RpbMapRedResp> map_red_sesp;
