@@ -85,7 +85,7 @@ namespace Message {
     typedef message<RPB_GET_BUCKET_RESP, RpbGetBucketResp> get_bucket_resp;
 
     typedef message<RPB_SET_BUCKET_REQ, RpbSetBucketReq> set_bucket_req;
-    typedef message<RPB_SET_BUCKET_RESP RpbSetBucketResp> set_bucket_resp;
+    typedef message<RPB_SET_BUCKET_RESP, RpbSetBucketResp> set_bucket_resp;
 
     typedef message<RPB_MAP_RED_REQ, RpbMapRedReq> map_red_req;
     typedef message<RPB_MAP_RED_RESP, RpbMapRedResp> map_red_sesp;

@@ -5,7 +5,7 @@ DEBUG = -g
 PROTOC = protoc
 SRC = ./src/
 PROTO_SRC = ./proto/riak.proto
-LIBS = -lprotobuf
+LIBS = -lprotobuf -lpthread
 
 PROTOC_OPTS = --cpp_out=$(SRC) $(PROTO_SRC)
 
